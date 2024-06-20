@@ -1,0 +1,13 @@
+import numpy as np 
+import pandas as pd 
+import matplotlib.pyplot as plt
+data = pd.read_csv('/kaggle/input/medical-reccomadation-dataset/medical data.csv')
+data 
+data.head()
+data.info()
+data.describe()
+data.isnull()
+print(data.columns)
+data.isnull().sum()
+missing_values = data.isnull().sum()
+print(missing_values[missing_values > 0])
